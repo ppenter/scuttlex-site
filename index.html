@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en" class="page-index">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SCUTTLE X · 5v5 spider-bot shooter</title>
+<meta name="description" content="SCUTTLE X: a 5v5 bomb-defusal shooter where every hero turns into a spider bot.">
+<meta name="theme-color" content="#0d0a1f">
+<link rel="canonical" href="https://scuttlex.com/">
+<link rel="alternate" hreflang="en" href="https://scuttlex.com/">
+<link rel="alternate" hreflang="th" href="https://scuttlex.com/th/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SCUTTLE X · 5v5 spider-bot shooter">
+<meta property="og:description" content="SCUTTLE X: a 5v5 bomb-defusal shooter where every hero turns into a spider bot.">
+<meta property="og:image" content="https://scuttlex.com/media/og.jpg">
+<meta property="og:url" content="https://scuttlex.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.png">
+<link rel="apple-touch-icon" href="media/apple-touch-icon.png">
+<link rel="preload" href="fonts/BarlowCondensed-Bold.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="media/hero_medic.webp" as="image" type="image/webp" fetchpriority="high">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js");try{var c={medic:"#c7ff26",ghost:"#a866ff",recon:"#ff4d4d",technical:"#66adff"}[localStorage.getItem("sx-hero")];if(c)document.documentElement.style.setProperty("--hero",c)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="in">
+<a class="brand" href="./" aria-label="SCUTTLE X"><img src="media/mark.webp" width="40" height="40" alt=""><span>SCUTTLE X</span></a>
+<nav class="nav"><a href="download.html">Download</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a class="lang" href="th/" hreflang="th" lang="th">ไทย</a></nav>
+</div></header>
+<main id="main">
+<section class="stage" aria-labelledby="stage-title">
+<div class="stage-copy">
+<h1 class="word" id="stage-title">SCUTTLE X</h1>
+<p class="pitch">5v5 bomb defusal and team deathmatch, where every hero can turn into a spider bot.</p>
+</div>
+<div class="cta stage-cta">
+<a class="btn" href="#trailer" data-play><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="18,8 54,32 18,56" fill="currentColor"/></svg>Watch the trailer</a>
+<a class="btn btn-ghost" href="download.html"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="18,8 54,32 18,56" fill="currentColor"/></svg>Get the game</a>
+<span class="soon">Coming soon to the App Store</span>
+</div>
+
+<div class="arena" data-arena>
+<div class="floor" aria-hidden="true"></div>
+<p class="bigname" aria-hidden="true" data-bigname>LUMI</p>
+<div class="ring" aria-hidden="true"><i></i></div>
+<div class="beam" aria-hidden="true"></div>
+<img class="still" data-still src="media/hero_medic.webp" width="690" height="1220" alt="LUMI, the Keeper">
+<canvas class="gl" data-gl aria-hidden="true"></canvas>
+<button class="morph" type="button" data-morph aria-pressed="false" data-on="Combat form" data-off="Spider form">
+<span class="morph-ring"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="40.66,41 32,46 23.34,41 23.34,31 32,26 40.66,31" fill="currentColor"/> <circle cx="32" cy="21" r="5.5" fill="currentColor"/> <polyline points="24,30 14,20 6,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="23,36 10,36 4,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="24,42 15,52 11,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,30 50,20 58,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="41,36 54,36 60,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,42 49,52 53,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/></svg><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="2,28 14,26 17,29 17,39 11,44 2,44" fill="currentColor"/><polygon points="15,26 45,26 48,23 54,23 54,27 63,27 63,32 48,32 45,35 15,35" fill="currentColor"/><polygon points="24,34 31,34 28,47 21,47" fill="currentColor"/><polygon points="35,34 42,34 45,45 39,46" fill="currentColor"/><polygon points="24,19 40,19 40,23 24,23" fill="currentColor"/><polygon points="28,22 31,22 31,27 28,27" fill="currentColor"/></svg></span><span class="morph-label" data-morph-label>Spider form</span>
+</button>
+</div>
+
+<div class="squad" role="radiogroup" aria-label="Heroes">
+<button type="button" role="radio" aria-checked="true" style="--c:#c7ff26" data-hero="medic" data-color="#c7ff26" data-name="LUMI" data-alt="LUMI, the Keeper" data-spider-alt="LUMI's spider bot" data-skill="MEDI-BOT" data-desc="Sets down a little spider bot that walks after you and heals teammates close by."><img src="media/portrait_medic.webp" width="96" height="96" alt=""><b>LUMI</b><span class="cls"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="56.25,46 32,60 7.75,46 7.75,18 32,4 56.25,18" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="miter"/> <path d="M32 47 L18 33 Q13 27.5 17 22.5 Q23 16 32 24.5 Q41 16 47 22.5 Q51 27.5 46 33 Z" fill="currentColor"/></svg>KEEPER</span></button>
+<button type="button" role="radio" aria-checked="false" style="--c:#a866ff" data-hero="ghost" data-color="#a866ff" data-name="HAZE" data-alt="HAZE, the Lurker" data-spider-alt="HAZE's spider bot" data-skill="CLOAK" data-desc="Fades out for six seconds. Enemies see only a shimmer, and firing ends it."><img src="media/portrait_ghost.webp" width="96" height="96" alt=""><b>HAZE</b><span class="cls"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="56.25,46 32,60 7.75,46 7.75,18 32,4 56.25,18" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="miter"/> <path d="M14 28 Q32 12 50 28" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter"/> <polygon points="15,35 29,30 28,40" fill="currentColor"/> <polygon points="49,35 35,30 36,40" fill="currentColor"/></svg>LURKER</span></button>
+<button type="button" role="radio" aria-checked="false" style="--c:#ff4d4d" data-hero="recon" data-color="#ff4d4d" data-name="BLAZE" data-alt="BLAZE, the Hunter" data-spider-alt="BLAZE's spider bot" data-skill="SCAN" data-desc="Sweeps sonar 30 m ahead, through walls. The enemy nearest your aim shows up for your whole team."><img src="media/portrait_recon.webp" width="96" height="96" alt=""><b>BLAZE</b><span class="cls"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="56.25,46 32,60 7.75,46 7.75,18 32,4 56.25,18" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="miter"/> <path d="M29 14 Q31 33 15 50 Q24 32 29 14 Z" fill="currentColor"/> <path d="M39 14 Q41 33 25 50 Q34 32 39 14 Z" fill="currentColor"/> <path d="M49 14 Q51 33 35 50 Q44 32 49 14 Z" fill="currentColor"/></svg>HUNTER</span></button>
+<button type="button" role="radio" aria-checked="false" style="--c:#66adff" data-hero="technical" data-color="#66adff" data-name="ZAP" data-alt="ZAP, the Weaver" data-spider-alt="ZAP's spider bot" data-skill="BARRIER" data-desc="Raises an energy wall that stops bullets but lets people walk through."><img src="media/portrait_technical.webp" width="96" height="96" alt=""><b>ZAP</b><span class="cls"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="56.25,46 32,60 7.75,46 7.75,18 32,4 56.25,18" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="miter"/> <polyline points="32,32 49.32,42" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="32,32 32,52" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="32,32 14.68,42" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="32,32 14.68,22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="32,32 32,12" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="32,32 49.32,22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" stroke-linejoin="miter"/> <polygon points="39.79,36.5 32,41 24.21,36.5 24.21,27.5 32,23 39.79,27.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="miter"/> <polygon points="46.72,40.5 32,49 17.28,40.5 17.28,23.5 32,15 46.72,23.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="miter"/></svg>WEAVER</span></button>
+</div>
+
+<div class="skill" aria-live="polite">
+<span class="skill-icon" data-skill-icon><span data-k="medic"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M32 57 L9 33 Q2 23 9 14 Q18 6 26 13 L32 19 L38 13 Q46 6 55 14 Q62 23 55 33 Z" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="13,33 22,33 27,24 33,42 38,30 51,30" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="square" stroke-linejoin="miter"/></svg></span><span data-k="ghost" hidden><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M4 32 Q32 6 60 32 Q32 58 4 32 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter"/> <circle cx="32" cy="32" r="7" fill="currentColor"/> <polyline points="12,54 52,10" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter"/></svg></span><span data-k="recon" hidden><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polyline points="32,58 4,30" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="32,58 60,30" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <path d="M3.72 29.72 A40 40 0 0 1 60.28 29.72" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="butt"/> <path d="M15.03 41.03 A24 24 0 0 1 48.97 41.03" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="butt"/> <circle cx="32" cy="58" r="3.5" fill="currentColor"/> <circle cx="41" cy="28" r="5" fill="currentColor"/></svg></span><span data-k="technical" hidden><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="31.09,27.25 22,32.5 12.91,27.25 12.91,16.75 22,11.5 31.09,16.75" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="miter"/> <polygon points="51.09,27.25 42,32.5 32.91,27.25 32.91,16.75 42,11.5 51.09,16.75" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="miter"/> <polygon points="21.09,44.25 12,49.5 2.91,44.25 2.91,33.75 12,28.5 21.09,33.75" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="miter"/> <polygon points="41.09,44.25 32,49.5 22.91,44.25 22.91,33.75 32,28.5 41.09,33.75" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="miter"/> <polygon points="61.09,44.25 52,49.5 42.91,44.25 42.91,33.75 52,28.5 61.09,33.75" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="miter"/> <polyline points="4,56 60,56" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></span>
+<p><b data-skill-name>MEDI-BOT</b><span data-skill-desc>Sets down a little spider bot that walks after you and heals teammates close by.</span></p>
+</div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track"><span class="tw">PLANT</span><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="40.66,41 32,46 23.34,41 23.34,31 32,26 40.66,31" fill="currentColor"/> <circle cx="32" cy="21" r="5.5" fill="currentColor"/> <polyline points="24,30 14,20 6,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="23,36 10,36 4,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="24,42 15,52 11,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,30 50,20 58,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="41,36 54,36 60,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,42 49,52 53,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/></svg><span class="tw solid">DEFUSE</span><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="40.66,41 32,46 23.34,41 23.34,31 32,26 40.66,31" fill="currentColor"/> <circle cx="32" cy="21" r="5.5" fill="currentColor"/> <polyline points="24,30 14,20 6,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="23,36 10,36 4,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="24,42 15,52 11,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,30 50,20 58,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="41,36 54,36 60,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,42 49,52 53,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/></svg><span class="tw">TRANSFORM</span><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="40.66,41 32,46 23.34,41 23.34,31 32,26 40.66,31" fill="currentColor"/> <circle cx="32" cy="21" r="5.5" fill="currentColor"/> <polyline points="24,30 14,20 6,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="23,36 10,36 4,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="24,42 15,52 11,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,30 50,20 58,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="41,36 54,36 60,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,42 49,52 53,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/></svg><span class="tw solid">CLUTCH</span><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="40.66,41 32,46 23.34,41 23.34,31 32,26 40.66,31" fill="currentColor"/> <circle cx="32" cy="21" r="5.5" fill="currentColor"/> <polyline points="24,30 14,20 6,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="23,36 10,36 4,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="24,42 15,52 11,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,30 50,20 58,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="41,36 54,36 60,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,42 49,52 53,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/></svg><span class="tw">5V5</span><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="40.66,41 32,46 23.34,41 23.34,31 32,26 40.66,31" fill="currentColor"/> <circle cx="32" cy="21" r="5.5" fill="currentColor"/> <polyline points="24,30 14,20 6,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="23,36 10,36 4,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="24,42 15,52 11,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,30 50,20 58,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="41,36 54,36 60,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,42 49,52 53,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/></svg><span class="tw solid">TDM</span><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="40.66,41 32,46 23.34,41 23.34,31 32,26 40.66,31" fill="currentColor"/> <circle cx="32" cy="21" r="5.5" fill="currentColor"/> <polyline points="24,30 14,20 6,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="23,36 10,36 4,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="24,42 15,52 11,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,30 50,20 58,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="41,36 54,36 60,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,42 49,52 53,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/></svg><span class="tw">PLANT</span><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="40.66,41 32,46 23.34,41 23.34,31 32,26 40.66,31" fill="currentColor"/> <circle cx="32" cy="21" r="5.5" fill="currentColor"/> <polyline points="24,30 14,20 6,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="23,36 10,36 4,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="24,42 15,52 11,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,30 50,20 58,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="41,36 54,36 60,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,42 49,52 53,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/></svg><span class="tw solid">DEFUSE</span><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="40.66,41 32,46 23.34,41 23.34,31 32,26 40.66,31" fill="currentColor"/> <circle cx="32" cy="21" r="5.5" fill="currentColor"/> <polyline points="24,30 14,20 6,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="23,36 10,36 4,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="24,42 15,52 11,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,30 50,20 58,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="41,36 54,36 60,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,42 49,52 53,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/></svg><span class="tw">TRANSFORM</span><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="40.66,41 32,46 23.34,41 23.34,31 32,26 40.66,31" fill="currentColor"/> <circle cx="32" cy="21" r="5.5" fill="currentColor"/> <polyline points="24,30 14,20 6,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="23,36 10,36 4,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="24,42 15,52 11,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,30 50,20 58,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="41,36 54,36 60,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,42 49,52 53,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/></svg><span class="tw solid">CLUTCH</span><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="40.66,41 32,46 23.34,41 23.34,31 32,26 40.66,31" fill="currentColor"/> <circle cx="32" cy="21" r="5.5" fill="currentColor"/> <polyline points="24,30 14,20 6,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="23,36 10,36 4,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="24,42 15,52 11,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,30 50,20 58,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="41,36 54,36 60,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,42 49,52 53,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/></svg><span class="tw">5V5</span><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="40.66,41 32,46 23.34,41 23.34,31 32,26 40.66,31" fill="currentColor"/> <circle cx="32" cy="21" r="5.5" fill="currentColor"/> <polyline points="24,30 14,20 6,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="23,36 10,36 4,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="24,42 15,52 11,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,30 50,20 58,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="41,36 54,36 60,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,42 49,52 53,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/></svg><span class="tw solid">TDM</span><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="40.66,41 32,46 23.34,41 23.34,31 32,26 40.66,31" fill="currentColor"/> <circle cx="32" cy="21" r="5.5" fill="currentColor"/> <polyline points="24,30 14,20 6,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="23,36 10,36 4,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="24,42 15,52 11,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,30 50,20 58,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="41,36 54,36 60,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,42 49,52 53,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/></svg></div></div>
+
+<section class="band trailer" id="trailer" aria-labelledby="trailer-title">
+<div class="wrap">
+<h2 id="trailer-title">Trailers</h2>
+<div class="films">
+<figure class="film">
+<button class="player" type="button" data-trailer data-src="media/trailer.mp4" aria-label="Play the 30-second trailer">
+<img src="media/trailer_poster.webp" width="1280" height="720" alt="" loading="lazy" decoding="async">
+<span class="play"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="18,8 54,32 18,56" fill="currentColor"/></svg></span>
+</button>
+<figcaption class="note"><b>The trailer</b> 30 seconds, sound on.</figcaption>
+</figure>
+<figure class="film">
+<button class="player" type="button" data-trailer data-src="media/story.mp4" aria-label="Play the story, 69 seconds">
+<img src="media/story_poster.webp" width="1280" height="720" alt="" loading="lazy" decoding="async">
+<span class="play"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="18,8 54,32 18,56" fill="currentColor"/></svg></span>
+</button>
+<figcaption class="note"><b>The story</b> 69 seconds: who these agents are, and what they fight for.</figcaption>
+</figure>
+</div>
+</div>
+</section>
+
+<section class="band modes" aria-labelledby="modes-title">
+<div class="wrap">
+<h2 id="modes-title">Two modes</h2>
+<p class="lede">Online, every match is drawn at random from the modes and maps you pick, at least two of each. Against bots, pick as few as one.</p>
+<div class="duel">
+<div class="side bomb"><img src="media/map_harbor.webp" width="1280" height="720" alt="" loading="lazy" decoding="async"><p class="name"><b>BOMB</b><span>First to 5 rounds</span></p></div>
+<div class="side tdm"><img src="media/map_railyard.webp" width="1280" height="720" alt="" loading="lazy" decoding="async"><p class="name"><b>TDM</b><span>First to 60 kills</span></p></div>
+<svg class="cut" viewBox="0 0 300 100" preserveAspectRatio="none" aria-hidden="true"><line class="wide" x1="200" y1="0" x2="100" y2="100"/><line class="narrow" x1="225" y1="0" x2="75" y2="100"/></svg>
+</div>
+<div class="mode-row">
+<div class="mode bomb"><span class="mi"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polyline points="23,19 23,9 41,9 41,19" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polygon points="18,18 46,18 53,25 53,47 46,54 18,54 11,47 11,25" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="miter"/> <circle cx="32" cy="36" r="8.5" fill="none" stroke="currentColor" stroke-width="4"/> <circle cx="32" cy="36" r="3.5" fill="currentColor"/> <rect x="17" y="27" width="3.5" height="18" fill="currentColor"/> <rect x="43.5" y="27" width="3.5" height="18" fill="currentColor"/></svg></span><b>BOMB</b><p>Plant it or defuse it. One life a round: nobody respawns until the next one. First to 5 rounds wins, and sides swap after round 4.</p></div>
+<div class="mode tdm"><span class="mi"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M12 30 Q12 6 32 6 Q52 6 52 30 L52 40 L44 44 L44 56 L20 56 L20 44 L12 40 Z M17 30 a6 6 0 1 0 12 0 a6 6 0 1 0 -12 0 Z M35 30 a6 6 0 1 0 12 0 a6 6 0 1 0 -12 0 Z M29 44 L32 38 L35 44 Z" fill="currentColor" fill-rule="evenodd"/> <rect x="27" y="50" width="2.5" height="6" fill="currentColor"/> <rect x="34.5" y="50" width="2.5" height="6" fill="currentColor"/></svg></span><b>TEAM DEATHMATCH</b><p>Nonstop fighting. Go down and you're back in 3 seconds, somewhere no enemy can see you. First to 60 kills wins, or the most kills when the 7 minutes run out.</p></div>
+</div>
+</div>
+</section>
+
+<section class="band round" aria-labelledby="round-title">
+<div class="wrap split">
+<div>
+<h2 id="round-title">How a bomb round plays</h2>
+<p class="lede">Attackers plant one bomb at site A or site B. Defenders stop the plant or defuse it. Nobody respawns until the next round.</p>
+<ol class="phases" data-phases>
+<li class="ph-freeze" style="--d:6"><span class="t">6 s</span><b>Freeze</b><span class="d">Look around, change your loadout, call the plan.</span><i></i></li>
+<li class="ph-push" style="--d:100"><span class="t">100 s</span><b>Push</b><span class="d">Attackers carry the bomb toward a site. Defenders split up and hold.</span><i></i></li>
+<li class="ph-plant" style="--d:4"><span class="t">4 s</span><b>Plant</b><span class="d">Hold inside the site's outline, crouched. Anyone close can stop you.</span><i></i></li>
+<li class="ph-fuse" style="--d:40"><span class="t">40 s</span><b>Fuse</b><span class="d">The beeping speeds up. Defenders have to take the site back.</span><i></i></li>
+<li class="ph-defuse" style="--d:7"><span class="t">7 s</span><b>Defuse</b><span class="d">Hold next to the bomb before the fuse runs out.</span><i></i></li>
+</ol>
+<p class="small">First team to 5 rounds wins. Sides swap after round 4.</p>
+</div>
+<figure class="shot">
+<img src="media/play_bomb.webp" srcset="media/play_bomb_s.webp 800w, media/play_bomb.webp 1600w" sizes="(max-width: 860px) 100vw, 640px" width="1600" height="738" alt="BLAZE carries the bomb onto site B on FROSTLINE YARD" loading="lazy" decoding="async">
+</figure>
+</div>
+</section>
+
+<section class="band spider" aria-labelledby="spider-title">
+<div class="wrap split rev">
+<figure class="shot">
+<img src="media/play_spider.webp" srcset="media/play_spider_s.webp 800w, media/play_spider.webp 1600w" sizes="(max-width: 860px) 100vw, 640px" width="1600" height="738" alt="A spider bot runs between freight wagons" loading="lazy" decoding="async">
+</figure>
+<div>
+<h2 id="spider-title">Turn into a spider bot any time</h2>
+<p class="lede">Get out of a lost fight, beat the other team to a site or slip through a crawl vent. A spider can't shoot, but it can be shot.</p>
+<ul class="race" data-race>
+<li style="--v:4.8"><span class="who">On foot</span><span class="lane"><i class="fill"></i><span class="runner"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="2,28 14,26 17,29 17,39 11,44 2,44" fill="currentColor"/><polygon points="15,26 45,26 48,23 54,23 54,27 63,27 63,32 48,32 45,35 15,35" fill="currentColor"/><polygon points="24,34 31,34 28,47 21,47" fill="currentColor"/><polygon points="35,34 42,34 45,45 39,46" fill="currentColor"/><polygon points="24,19 40,19 40,23 24,23" fill="currentColor"/><polygon points="28,22 31,22 31,27 28,27" fill="currentColor"/></svg></span></span><b class="val">4.8 m/s</b></li>
+<li style="--v:5.8"><span class="who">Knife out</span><span class="lane"><i class="fill"></i><span class="runner"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M22 42 Q30 22 52 8 Q60 6 58 14 Q48 34 30 48 Z" fill="currentColor"/> <polyline points="16,36 30,50" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter"/> <polygon points="18,46 24,52 12,62 6,56" fill="currentColor"/></svg></span></span><b class="val">5.8 m/s</b></li>
+<li class="fast" style="--v:7.5"><span class="who">Spider bot</span><span class="lane"><i class="fill"></i><span class="runner"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="40.66,41 32,46 23.34,41 23.34,31 32,26 40.66,31" fill="currentColor"/> <circle cx="32" cy="21" r="5.5" fill="currentColor"/> <polyline points="24,30 14,20 6,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="23,36 10,36 4,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="24,42 15,52 11,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,30 50,20 58,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="41,36 54,36 60,46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="40,42 49,52 53,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></span><b class="val">7.5 m/s</b></li>
+</ul>
+<ul class="facts">
+<li>0.2 s to turn into a spider, 0.35 s to turn back.</li>
+<li>Crawl vents link the lanes on both maps.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="band maps" aria-labelledby="maps-title">
+<div class="wrap">
+<h2 id="maps-title">Two maps</h2>
+<div class="map-row">
+<figure class="map"><img src="media/map_harbor.webp" width="1280" height="720" alt="DUSK HARBOR from above at dusk" loading="lazy" decoding="async"><figcaption><b>DUSK HARBOR</b><span>Three lanes between warehouses, a crane gantry over mid and a two-storey harbour office.</span></figcaption></figure>
+<figure class="map"><img src="media/map_railyard.webp" width="1280" height="720" alt="FROSTLINE YARD under the northern lights" loading="lazy" decoding="async"><figcaption><b>FROSTLINE YARD</b><span>A frozen freight yard at night, with a station hall, a signal box and a footbridge over mid.</span></figcaption></figure>
+</div>
+</div>
+</section>
+
+<section class="band arsenal" aria-labelledby="arsenal-title">
+<div class="wrap">
+<h2 id="arsenal-title">Real guns, arcade rules</h2>
+<p class="lede">Energy bolts fly straight, with no drop. Start with the M4A1, then earn credits in matches to buy or rent the rest.</p>
+<ul class="guns">
+<li><img src="media/gun_carbine.webp" alt="" loading="lazy" decoding="async"><b>M4A1</b><span>Assault rifle</span></li>
+<li><img src="media/gun_hornet.webp" alt="" loading="lazy" decoding="async"><b>SCW-9</b><span>SMG</span></li>
+<li><img src="media/gun_thunderclap.webp" alt="" loading="lazy" decoding="async"><b>M870</b><span>Shotgun</span></li>
+<li><img src="media/gun_hive_cannon.webp" alt="" loading="lazy" decoding="async"><b>RPK</b><span>LMG</span></li>
+<li><img src="media/gun_lancer.webp" alt="" loading="lazy" decoding="async"><b>DMR-1</b><span>Marksman</span></li>
+<li><img src="media/gun_starpiercer.webp" alt="" loading="lazy" decoding="async"><b>SSG</b><span>Sniper</span></li>
+<li><img src="media/gun_spark.webp" alt="" loading="lazy" decoding="async"><b>M11</b><span>Sidearm</span></li>
+<li><img src="media/gun_knife.webp" alt="" loading="lazy" decoding="async"><b>CLAW BLADE</b><span>Melee</span></li>
+</ul>
+</div>
+</section>
+
+<section class="band outro" aria-labelledby="outro-title">
+<div class="wrap">
+<h2 id="outro-title">Squad up</h2>
+<p class="lede">Party with up to five friends, take on daily missions, rise through 50 ranks and unlock 45 titles.</p>
+<div class="cta">
+<a class="btn" href="#trailer" data-play><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="18,8 54,32 18,56" fill="currentColor"/></svg>Watch the trailer</a>
+<a class="btn btn-ghost" href="download.html"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="18,8 54,32 18,56" fill="currentColor"/></svg>Get the game</a>
+<span class="soon">Coming soon to the App Store</span>
+</div>
+<p class="social-kicker">Join the community</p>
+<div class="social"><a class="social-card" href="https://www.facebook.com/scuttlex" target="_blank" rel="noopener"><span class="social-mark"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path fill="currentColor" d="M38 61.39 A30 30 0 1 0 30 61.93 L30 38 L24 38 L24 31 L30 31 L30 25 Q30 14 41 14 L46 14 L46 21 L42 21 Q38 21 38 25 L38 31 L45.5 31 L44.5 38 L38 38 Z"/></svg></span><b>Facebook Page</b><span>News and updates</span></a><a class="social-card" href="https://www.facebook.com/groups/3428875307285060" target="_blank" rel="noopener"><span class="social-mark"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="24" cy="22" r="9" fill="currentColor"/> <path d="M8 56 Q8 36 24 36 Q40 36 40 56 Z" fill="currentColor"/> <circle cx="44" cy="18" r="7" fill="none" stroke="currentColor" stroke-width="3.5"/> <path d="M44 32 Q58 32 58 50 L46 50" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="square" stroke-linejoin="miter"/></svg></span><b>Facebook Group</b><span>Find teammates and chat</span></a></div>
+</div>
+</section>
+
+</main>
+<footer class="foot"><div class="in">
+<a class="brand" href="./"><img src="media/mark.webp" width="40" height="40" alt=""><span>SCUTTLE X</span></a>
+<nav class="foot-links"><a href="download.html">Download</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="th/" hreflang="th" lang="th">ภาษาไทย</a><a class="social-link" href="https://www.facebook.com/scuttlex" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path fill="currentColor" d="M38 61.39 A30 30 0 1 0 30 61.93 L30 38 L24 38 L24 31 L30 31 L30 25 Q30 14 41 14 L46 14 L46 21 L42 21 Q38 21 38 25 L38 31 L45.5 31 L44.5 38 L38 38 Z"/></svg>Facebook</a><a class="social-link" href="https://www.facebook.com/groups/3428875307285060" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="24" cy="22" r="9" fill="currentColor"/> <path d="M8 56 Q8 36 24 36 Q40 36 40 56 Z" fill="currentColor"/> <circle cx="44" cy="18" r="7" fill="none" stroke="currentColor" stroke-width="3.5"/> <path d="M44 32 Q58 32 58 50 L46 50" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="square" stroke-linejoin="miter"/></svg>Player group</a></nav>
+<p class="foot-meta">Made by ppenter (Jarupak Srisuchat)<br>Contact: <a href="mailto:support@scuttlex.com">support@scuttlex.com</a><br>&copy; 2026 SCUTTLE X</p>
+</div></footer>
+<script src="site.js" defer></script>
+</body>
+</html>
