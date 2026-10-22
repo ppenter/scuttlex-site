@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en" class="page-index">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SCUTTLE X · 8v8 capture shooter</title>
+<meta name="description" content="SCUTTLE X: an 8v8 zone-capture shooter with four skill devices and squads of eight.">
+<meta name="theme-color" content="#0f0c15">
+<link rel="canonical" href="https://scuttlex.com/">
+<link rel="alternate" hreflang="en" href="https://scuttlex.com/">
+<link rel="alternate" hreflang="th" href="https://scuttlex.com/th/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SCUTTLE X · 8v8 capture shooter">
+<meta property="og:description" content="SCUTTLE X: an 8v8 zone-capture shooter with four skill devices and squads of eight.">
+<meta property="og:image" content="https://scuttlex.com/media/og.jpg">
+<meta property="og:url" content="https://scuttlex.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.png">
+<link rel="apple-touch-icon" href="media/apple-touch-icon.png">
+<link rel="preload" href="fonts/BarlowCondensed-ExtraBold.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="media/hero_poster.webp" as="image" type="image/webp" fetchpriority="high">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js");try{var c={medic:"#c7ff26",ghost:"#a866ff",recon:"#ff4d4d",technical:"#66adff"}[localStorage.getItem("sx-hero")];if(c)document.documentElement.style.setProperty("--hero",c)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="in">
+<a class="brand" href="./" aria-label="SCUTTLE X"><img src="media/mark.webp" width="40" height="40" alt=""><span>SCUTTLE X</span></a>
+<nav class="nav"><a href="download.html">Download</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a class="lang" href="th/" hreflang="th" lang="th">ไทย</a></nav>
+</div></header>
+<main id="main">
+<section class="hero" aria-labelledby="hero-title">
+<div class="hero-film" aria-hidden="true">
+<video data-loop data-src="media/hero_loop.mp4" poster="media/hero_poster.webp" muted loop playsinline preload="none"></video>
+</div>
+<div class="hero-copy">
+<a class="beta-chip" href="download.html"><i></i>Closed beta now open</a>
+<h1 class="wordmark" id="hero-title"><span>SCUTTLE X</span></h1>
+<div class="hero-foot">
+<p class="pitch">Eight against eight, in first person. Take the zones, hold them, climb to the rooftops and roll out of trouble with the skill device you pick.</p>
+<div class="cta">
+<a class="btn" href="#trailer" data-play><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="18,8 54,32 18,56" fill="currentColor"/></svg>Watch gameplay</a>
+<a class="btn btn-ghost" href="download.html"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="18,8 54,32 18,56" fill="currentColor"/></svg>Get the game</a>
+<span class="soon">Coming soon to the App Store</span>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec theatre" id="trailer" aria-labelledby="trailer-title">
+<div class="wrap">
+<div class="sec-head">
+<h2 id="trailer-title">Gameplay</h2>
+<p class="aside">A real match on PRIMETIME PLAZA, filmed as it played. Turn the sound on.</p>
+</div>
+<div class="player" data-trailer data-src="media/trailer.mp4">
+<img src="media/trailer_poster.webp" width="1280" height="720" alt="" loading="lazy" decoding="async">
+<button class="play" type="button" aria-label="Play the gameplay video, 37 seconds"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="18,8 54,32 18,56" fill="currentColor"/></svg><span>Play</span><span class="len">0:37</span></button>
+</div>
+</div>
+</section>
+
+<section class="sec match" aria-labelledby="match-title">
+<div class="wrap split">
+<div>
+<h2 id="match-title">Hold the most zones</h2>
+<p class="lede">The arena has five zones, A to E. Stand in one to pull its bar to your side. Each zone your team holds scores a point every 2.5 seconds, whether anyone stays in it or not.</p>
+<ol class="steps" data-steps>
+<li><b>Take</b><span>Stand inside. Alone you fill it in 5 seconds, five of you in 1.</span></li>
+<li><b>Hold</b><span>It stays yours until the other team drains it back to neutral, and it scores the whole time.</span></li>
+<li><b>Contest</b><span>With both teams inside, the side with more pulls the bar, faster the more it has. Even numbers and it stops.</span></li>
+<li><b>Swap</b><span>At 150 points or five minutes, sides swap and every zone goes neutral.</span></li>
+<li><b>Win</b><span>First team to 300 wins. Go down and you're back in 5 seconds.</span></li>
+</ol>
+</div>
+<div class="board" data-board data-words='{"neutral": "Zones neutral", "taken": "Zone {z} taken", "enemy": "Enemy took {z}", "contest": "Zone {z} contested: even numbers, the bar stops", "drained": "Zone {z} drained to neutral", "half": "Halftime: sides swap, zones neutral", "second": "Second half", "win": "Victory, 300 to 251"}' aria-label="A match playing itself out on the five zones" role="img">
+<div class="board-score">
+<p class="side us"><span>Your team</span><b data-score="0">0</b></p>
+<p class="to">First to 300</p>
+<p class="side them"><span>Enemy</span><b data-score="1">0</b></p>
+</div>
+<ol class="zones">
+<li data-zone="A"><b>A</b><i></i></li>
+<li data-zone="B"><b>B</b><i></i></li>
+<li data-zone="C"><b>C</b><i></i></li>
+<li data-zone="D"><b>D</b><i></i></li>
+<li data-zone="E"><b>E</b><i></i></li>
+</ol>
+<p class="board-note" data-note>Zones neutral</p>
+</div>
+</div>
+</section>
+
+<section class="sec dash" aria-labelledby="dash-title">
+<div class="wrap split rev">
+<figure class="clip">
+<video data-clip data-src="media/dash_loop.mp4" poster="media/dash_poster.webp" muted loop playsinline preload="none" aria-label="A fighter rolls out of the line of fire and comes up firing"></video>
+</figure>
+<div>
+<h2 id="dash-title">Roll and climb</h2>
+<p class="lede">Tap ROLL and you dodge three metres the way you're moving, then come up with the gun ready. Slip out of a duel, cross an open lane or dive into cover. Then take the high ground: pull yourself up onto ledges, climb ladders and ride ziplines to the rooftops.</p>
+<ul class="race" data-race>
+<li style="--v:5.0"><span class="who">On foot</span><span class="lane"><i></i></span><b>5.0 m/s</b></li>
+<li style="--v:6.0"><span class="who">Knife out</span><span class="lane"><i></i></span><b>6.0 m/s</b></li>
+<li class="fast" style="--v:7.5"><span class="who">Roll</span><span class="lane"><i></i></span><b>7.5 m/s</b></li>
+</ul>
+<ul class="facts">
+<li>Ready again a moment after you land, sooner with a light weapon in hand.</li>
+<li>Ammo never runs out either. Reload and get back in.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="sec roster" aria-labelledby="roster-title">
+<div class="wrap">
+<div class="sec-head">
+<h2 id="roster-title">Four skill devices</h2>
+<p class="aside">Every device is free: pick one and change it any time in the loadout. Two skills and a passive each. Play as a woman or a man with the face, hair and outfit you pick: what you can do comes from your device, never from your look.</p>
+</div>
+<div class="slabs" data-slabs>
+<article class="slab" style="--c:#c7ff26" data-hero="medic" data-name="MEDIC" aria-expanded="true">
+<button class="slab-pick" type="button" aria-label="MEDIC"><span class="slab-name">MEDIC</span></button>
+<div class="slab-body">
+<p class="slab-class"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M24 5h16v19h19v16H40v19H24V40H5V24h19z" fill="currentColor"/></svg>Skill device  ·  M6 AURA</p>
+<p class="slab-title">MEDIC</p>
+<div class="slab-skill"><span class="slab-icon"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M32 57 L9 33 Q2 23 9 14 Q18 6 26 13 L32 19 L38 13 Q46 6 55 14 Q62 23 55 33 Z" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="13,33 22,33 27,24 33,42 38,30 51,30" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="square" stroke-linejoin="miter"/></svg></span><p><b>MEDI-BOT</b>Sends out a hovering drone that follows you and heals teammates close by.</p></div>
+<div class="slab-skill"><span class="slab-icon"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polyline points="44,12 52,20" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="48,16 24,40" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="24,40 12,52" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="36,16 56,36" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="square" stroke-linejoin="miter"/></svg></span><p><b>ADRENALINE</b>Run and fire 25% faster for 4 seconds.</p></div>
+<div class="slab-skill"><span class="slab-icon"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M24 5h16v19h19v16H40v19H24V40H5V24h19z" fill="currentColor"/></svg></span><p><b>REGEN</b>Health comes back 3 seconds after the fighting stops.</p></div>
+</div>
+<div class="slab-art" aria-hidden="true"><img class="h" src="media/device_medic.webp" width="690" height="1220" alt="" loading="lazy" decoding="async"></div>
+</article>
+<article class="slab" style="--c:#a866ff" data-hero="ghost" data-name="GHOST" aria-expanded="false">
+<button class="slab-pick" type="button" aria-label="GHOST"><span class="slab-name">GHOST</span></button>
+<div class="slab-body">
+<p class="slab-class"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path fill-rule="evenodd" fill="currentColor" d="M32 3C46 3 55 15 55 30V60L43 53L32 61L21 53L9 60V30C9 15 18 3 32 3ZM32 18C24 18 19 25 19 33C19 41 25 47 32 47C39 47 45 41 45 33C45 25 40 18 32 18Z"/> <polygon points="21,31 30,34 29,38 22,36" fill="currentColor"/> <polygon points="43,31 34,34 35,38 42,36" fill="currentColor"/></svg>Skill device  ·  G3 SHADE</p>
+<p class="slab-title">GHOST</p>
+<div class="slab-skill"><span class="slab-icon"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M4 32 Q32 6 60 32 Q32 58 4 32 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter"/> <circle cx="32" cy="32" r="7" fill="currentColor"/> <polyline points="12,54 52,10" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter"/></svg></span><p><b>CLOAK</b>Fades out for 15 seconds. Still or crouched, almost nothing shows; moving or firing gives a shimmer away.</p></div>
+<div class="slab-skill"><span class="slab-icon"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="14" cy="44" r="6" fill="none" stroke="currentColor" stroke-width="3.5"/> <polyline points="22,38 27,34" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="32,30 37,26" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <circle cx="48" cy="20" r="8" fill="currentColor"/> <circle cx="48" cy="20" r="13" fill="none" stroke="currentColor" stroke-width="3"/></svg></span><p><b>BLINK</b>Teleports up to 8 m the way you look.</p></div>
+<div class="slab-skill"><span class="slab-icon"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path fill-rule="evenodd" fill="currentColor" d="M32 3C46 3 55 15 55 30V60L43 53L32 61L21 53L9 60V30C9 15 18 3 32 3ZM32 18C24 18 19 25 19 33C19 41 25 47 32 47C39 47 45 41 45 33C45 25 40 18 32 18Z"/> <polygon points="21,31 30,34 29,38 22,36" fill="currentColor"/> <polygon points="43,31 34,34 35,38 42,36" fill="currentColor"/></svg></span><p><b>SILENT STEPS</b>Your footsteps make no sound.</p></div>
+</div>
+<div class="slab-art" aria-hidden="true"><img class="h" src="media/device_ghost.webp" width="690" height="1220" alt="" loading="lazy" decoding="async"></div>
+</article>
+<article class="slab" style="--c:#ff4d4d" data-hero="recon" data-name="RECON" aria-expanded="false">
+<button class="slab-pick" type="button" aria-label="RECON"><span class="slab-name">RECON</span></button>
+<div class="slab-body">
+<p class="slab-class"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="17" fill="none" stroke="currentColor" stroke-width="6"/> <circle cx="32" cy="32" r="4.5" fill="currentColor"/> <path d="M29 2h6v14h-6zM29 48h6v14h-6zM2 29h14v6H2zM48 29h14v6H48z" fill="currentColor"/></svg>Skill device  ·  R1 ARGUS</p>
+<p class="slab-title">RECON</p>
+<div class="slab-skill"><span class="slab-icon"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polyline points="32,58 4,30" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <polyline points="32,58 60,30" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <path d="M3.72 29.72 A40 40 0 0 1 60.28 29.72" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="butt"/> <path d="M15.03 41.03 A24 24 0 0 1 48.97 41.03" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="butt"/> <circle cx="32" cy="58" r="3.5" fill="currentColor"/> <circle cx="41" cy="28" r="5" fill="currentColor"/></svg></span><p><b>SCAN</b>Sweeps sonar 30 m ahead, through walls. Up to five enemies in it show up for your whole team.</p></div>
+<div class="slab-skill"><span class="slab-icon"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="30" cy="40" r="15" fill="currentColor"/> <rect x="24" y="18" width="12" height="8" fill="currentColor"/> <polyline points="36,20 48,30" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/> <circle cx="46" cy="14" r="5" fill="none" stroke="currentColor" stroke-width="3"/></svg></span><p><b>FRAG</b>A grenade you throw along a line you can see: hold to aim, let go to throw. It bounces and goes off 2.2 seconds later.</p></div>
+<div class="slab-skill"><span class="slab-icon"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="17" fill="none" stroke="currentColor" stroke-width="6"/> <circle cx="32" cy="32" r="4.5" fill="currentColor"/> <path d="M29 2h6v14h-6zM29 48h6v14h-6zM2 29h14v6H2zM48 29h14v6H48z" fill="currentColor"/></svg></span><p><b>TRACKER</b>Every enemy you hit shows to your team for 2 seconds.</p></div>
+</div>
+<div class="slab-art" aria-hidden="true"><img class="h" src="media/device_recon.webp" width="690" height="1220" alt="" loading="lazy" decoding="async"></div>
+</article>
+<article class="slab" style="--c:#66adff" data-hero="technical" data-name="TECH" aria-expanded="false">
+<button class="slab-pick" type="button" aria-label="TECH"><span class="slab-name">TECH</span></button>
+<div class="slab-body">
+<p class="slab-class"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="34,3 47,3 38,25 52,25 21,61 28,36 13,36" fill="currentColor"/></svg>Skill device  ·  T2 VOLT</p>
+<p class="slab-title">TECH</p>
+<div class="slab-skill"><span class="slab-icon"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="31.09,27.25 22,32.5 12.91,27.25 12.91,16.75 22,11.5 31.09,16.75" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="miter"/> <polygon points="51.09,27.25 42,32.5 32.91,27.25 32.91,16.75 42,11.5 51.09,16.75" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="miter"/> <polygon points="21.09,44.25 12,49.5 2.91,44.25 2.91,33.75 12,28.5 21.09,33.75" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="miter"/> <polygon points="41.09,44.25 32,49.5 22.91,44.25 22.91,33.75 32,28.5 41.09,33.75" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="miter"/> <polygon points="61.09,44.25 52,49.5 42.91,44.25 42.91,33.75 52,28.5 61.09,33.75" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="miter"/> <polyline points="4,56 60,56" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/></svg></span><p><b>BARRIER</b>Raises an energy wall that stops bullets but lets people walk through.</p></div>
+<div class="slab-skill"><span class="slab-icon"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="36,12 22,34 31,34 27,52 42,28 33,28" fill="currentColor"/> <circle cx="32" cy="32" r="22" fill="none" stroke="currentColor" stroke-width="3"/> <path d="M4.75 22.08 A29 29 0 0 1 22.08 4.75" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="butt"/> <path d="M59.25 41.92 A29 29 0 0 1 41.92 59.25" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="butt"/></svg></span><p><b>EMP</b>A pulse round you: enemies in it can't use skills for 4 seconds.</p></div>
+<div class="slab-skill"><span class="slab-icon"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="34,3 47,3 38,25 52,25 21,61 28,36 13,36" fill="currentColor"/></svg></span><p><b>ARMOR PLATING</b>120 health instead of 100.</p></div>
+</div>
+<div class="slab-art" aria-hidden="true"><img class="h" src="media/device_technical.webp" width="690" height="1220" alt="" loading="lazy" decoding="async"></div>
+</article>
+</div>
+</div>
+</section>
+
+<section class="sec modes" aria-labelledby="modes-title">
+<div class="wrap">
+<div class="sec-head">
+<h2 id="modes-title">Capture on PRIMETIME PLAZA</h2>
+<p class="aside">Online, every match plays on PRIMETIME PLAZA. In a custom game you set the rules, with friends or against bots.</p>
+</div>
+<div class="mode-rows">
+<div class="mode-row cap"><span class="mi"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><ellipse cx="32" cy="48" rx="26" ry="10" fill="none" stroke="currentColor" stroke-width="4"/> <rect x="29" y="8" width="5" height="40" fill="currentColor"/> <path d="M34 8 L52 15 L34 22 Z" fill="currentColor"/></svg></span><b>Capture</b><p>Five zones. First to 300 points, and the sides swap at halftime.</p></div>
+</div>
+<div class="maps one">
+<figure class="map"><img src="media/map_primetime.webp" width="1280" height="720" alt="PRIMETIME PLAZA from above, a city block built inside a broadcast hall" loading="lazy" decoding="async"><figcaption><b>PRIMETIME PLAZA</b><span>A city block built as a TV show's set inside a broadcast hall: studio fronts and rooftops to climb, stage trucks, and a screen tower in the middle.</span></figcaption></figure>
+</div>
+<p class="small">Each half of the arena is the other half turned around, so neither side starts ahead.</p>
+</div>
+</section>
+
+<section class="sec arsenal" aria-labelledby="arsenal-title">
+<div class="wrap">
+<div class="sec-head">
+<h2 id="arsenal-title">Real guns, arcade rules</h2>
+<p class="aside">Energy bolts fly straight, with no drop. Every standard gun is free from the start; earn credits in matches to rent their special editions.</p>
+</div>
+<ul class="guns">
+<li><img src="media/gun_carbine.webp" alt="" loading="lazy" decoding="async"><b>M4A1</b><span>Assault rifle</span></li>
+<li><img src="media/gun_hornet.webp" alt="" loading="lazy" decoding="async"><b>SCW-9</b><span>SMG</span></li>
+<li><img src="media/gun_thunderclap.webp" alt="" loading="lazy" decoding="async"><b>M870</b><span>Shotgun</span></li>
+<li><img src="media/gun_hive_cannon.webp" alt="" loading="lazy" decoding="async"><b>RPK</b><span>LMG</span></li>
+<li><img src="media/gun_lancer.webp" alt="" loading="lazy" decoding="async"><b>DMR-1</b><span>Marksman</span></li>
+<li><img src="media/gun_starpiercer.webp" alt="" loading="lazy" decoding="async"><b>SSG</b><span>Sniper</span></li>
+<li><img src="media/gun_katana.webp" alt="" loading="lazy" decoding="async"><b>KATANA</b><span>Melee</span></li>
+<li><img src="media/gun_knife.webp" alt="" loading="lazy" decoding="async"><b>CLAW BLADE</b><span>Melee</span></li>
+</ul>
+</div>
+</section>
+
+<section class="sec join" aria-labelledby="join-title">
+<div class="stripes" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<div class="wrap">
+<h2 id="join-title">Squad up</h2>
+<p class="lede">Squad up to eight with friends, take on daily missions, rise through 50 ranks and unlock 41 titles.</p>
+<div class="cta">
+<a class="btn" href="#trailer" data-play><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="18,8 54,32 18,56" fill="currentColor"/></svg>Watch gameplay</a>
+<a class="btn btn-ghost" href="download.html"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><polygon points="18,8 54,32 18,56" fill="currentColor"/></svg>Get the game</a>
+<span class="soon">Coming soon to the App Store</span>
+</div>
+<p class="social-kicker">Join the community</p>
+<div class="social"><a class="social-card" href="https://www.facebook.com/scuttlex" target="_blank" rel="noopener"><span class="social-mark"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path fill="currentColor" d="M38 61.39 A30 30 0 1 0 30 61.93 L30 38 L24 38 L24 31 L30 31 L30 25 Q30 14 41 14 L46 14 L46 21 L42 21 Q38 21 38 25 L38 31 L45.5 31 L44.5 38 L38 38 Z"/></svg></span><b>Facebook Page</b><span>News and updates</span></a><a class="social-card" href="https://www.facebook.com/groups/3428875307285060" target="_blank" rel="noopener"><span class="social-mark"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="24" cy="22" r="9" fill="currentColor"/> <path d="M8 56 Q8 36 24 36 Q40 36 40 56 Z" fill="currentColor"/> <circle cx="44" cy="18" r="7" fill="none" stroke="currentColor" stroke-width="3.5"/> <path d="M44 32 Q58 32 58 50 L46 50" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="square" stroke-linejoin="miter"/></svg></span><b>Facebook Group</b><span>Find teammates and chat</span></a></div>
+</div>
+</section>
+
+</main>
+<footer class="foot"><div class="in">
+<a class="brand" href="./"><img src="media/mark.webp" width="40" height="40" alt=""><span>SCUTTLE X</span></a>
+<nav class="foot-links"><a href="download.html">Download</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="th/" hreflang="th" lang="th">ภาษาไทย</a><a class="social-link" href="https://www.facebook.com/scuttlex" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path fill="currentColor" d="M38 61.39 A30 30 0 1 0 30 61.93 L30 38 L24 38 L24 31 L30 31 L30 25 Q30 14 41 14 L46 14 L46 21 L42 21 Q38 21 38 25 L38 31 L45.5 31 L44.5 38 L38 38 Z"/></svg>Facebook</a><a class="social-link" href="https://www.facebook.com/groups/3428875307285060" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="24" cy="22" r="9" fill="currentColor"/> <path d="M8 56 Q8 36 24 36 Q40 36 40 56 Z" fill="currentColor"/> <circle cx="44" cy="18" r="7" fill="none" stroke="currentColor" stroke-width="3.5"/> <path d="M44 32 Q58 32 58 50 L46 50" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="square" stroke-linejoin="miter"/></svg>Player group</a></nav>
+<p class="foot-meta">Made by ppenter (Jarupak Srisuchat)<br>Contact: <a href="mailto:support@scuttlex.com">support@scuttlex.com</a><br>&copy; 2026 SCUTTLE X</p>
+</div></footer>
+<script src="site.js" defer></script>
+</body>
+</html>
